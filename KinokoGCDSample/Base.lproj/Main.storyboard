@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KinokoGCDSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HK-8d-MtL">
+                                <rect key="frame" x="80" y="200" width="215" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XV1-Bg-hFX"/>
+                                </constraints>
+                                <state key="normal" title="すべてをメインスレッドで行う"/>
+                                <connections>
+                                    <action selector="onButton1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsV-oq-tVX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjI-O0-puK">
+                                <rect key="frame" x="95" y="250" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5wc-ii-l2W"/>
+                                </constraints>
+                                <state key="normal" title="キューが並列に処理される"/>
+                                <connections>
+                                    <action selector="onButton2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0RK-CO-fb7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cE-xX-kJV">
+                                <rect key="frame" x="65" y="300" width="245" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zoo-fi-5CE"/>
+                                </constraints>
+                                <state key="normal" title="複数のキューの終了後に処理を行う"/>
+                                <connections>
+                                    <action selector="onButton3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwn-wd-UOh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQd-Ug-ryN">
+                                <rect key="frame" x="95" y="350" width="184" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aOe-KN-psW"/>
+                                </constraints>
+                                <state key="normal" title="何か処理した後に値を返す"/>
+                                <connections>
+                                    <action selector="onButton4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3c-7R-nNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ft-xj-3Un">
+                                <rect key="frame" x="57" y="400" width="261" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ahn-cU-rTh"/>
+                                </constraints>
+                                <state key="normal" title="複数のキューの並列処理後に値を返す"/>
+                                <connections>
+                                    <action selector="onButton5Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jy-5V-iV5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1HK-8d-MtL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="66z-lt-WAO"/>
+                            <constraint firstItem="1HK-8d-MtL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6FP-Rq-qSx"/>
+                            <constraint firstItem="YjI-O0-puK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E6L-op-buK"/>
+                            <constraint firstItem="9ft-xj-3Un" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P32-W2-d7r"/>
+                            <constraint firstItem="9ft-xj-3Un" firstAttribute="top" secondItem="nQd-Ug-ryN" secondAttribute="bottom" constant="20" id="SYN-T7-K6O"/>
+                            <constraint firstItem="nQd-Ug-ryN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b0P-rR-onf"/>
+                            <constraint firstItem="5cE-xX-kJV" firstAttribute="top" secondItem="YjI-O0-puK" secondAttribute="bottom" constant="20" id="fNY-kU-u2Y"/>
+                            <constraint firstItem="YjI-O0-puK" firstAttribute="top" secondItem="1HK-8d-MtL" secondAttribute="bottom" constant="20" id="hy6-gt-t4g"/>
+                            <constraint firstItem="5cE-xX-kJV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lsc-nj-RqF"/>
+                            <constraint firstItem="nQd-Ug-ryN" firstAttribute="top" secondItem="5cE-xX-kJV" secondAttribute="bottom" constant="20" id="pkW-Sm-g6F"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>
